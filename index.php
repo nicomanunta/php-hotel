@@ -1,3 +1,8 @@
+<?php
+    include __DIR__."/partials/array_hotel.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,10 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <?php
+        foreach($hotels as $hotel){
+            echo $hotel["name"]." ".$hotel["description"]." ".$hotel["vote"]." ".$hotel["distance_to_center"]."<br>";   
+        }
+    ?>
 </body>
 </html>
