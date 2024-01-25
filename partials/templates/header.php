@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="bg-header">
+    <header class="bg-header-footer">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -16,16 +16,16 @@
                 </div>
                 <div class="col-6 ">
                     <ul class="d-flex list-unstyled justify-content-center pt-2 ">
-                        <li class="mx-3">
+                        <li class="mx-3 list-header ">
                             <a href="#" id="color">Home</a>
                         </li>
-                        <li class="mx-3">
+                        <li class="mx-3 list-header">
                             <a href="#" id="color">Soggiorni</a>
                         </li>
-                        <li class="mx-3">
+                        <li class="mx-3 list-header">
                             <a href="#" id="color">Voli</a>
                         </li>
-                        <li class="mx-3">
+                        <li class="mx-3 list-header">
                             <a href="#" id="color">Volo + hotel</a>
                         </li>
                     </ul>

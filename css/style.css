@@ -5,7 +5,7 @@
 }
 
 /* header */
-.bg-header {
+.bg-header-footer {
     background-color: #013B94;
     padding: 30px 0px;
 }
@@ -19,14 +19,17 @@
     text-decoration: none;
 }
 
-li {
+.list-header {
     padding: 10px 15px;
     border-radius: 50px;
 }
 
-li:hover {
+.list-header:hover {
     background-color: #234E9E;
 
 }
 
 /* footer */
+.color-hover:hover {
+    color: gray !important;
+}
