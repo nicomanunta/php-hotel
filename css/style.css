@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+main {
+    min-height: 50vh;
+}
+
 /* header */
 .bg-header-footer {
     background-color: #013B94;
