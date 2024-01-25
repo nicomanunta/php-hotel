@@ -2,16 +2,28 @@
     include __DIR__."/partials/array_hotel.php";
 
     $filter_hotel = $hotels;
+
     if(isset($_GET["parking"]) && $_GET["parking"] != "Seleziona filtro parcheggio"){
-        $filter_hotel = [];
+        $temporaneo_hotel = [];
         $parking = $_GET["parking"];
         foreach ($hotels as $hotel){
             if ($hotel["parking"] == $parking){
-                $filter_hotel [] = $hotel;
-                
-                
+                $temporaneo_hotel [] = $hotel;
+                   
             }
         }
+        $filter_hotel = $temporaneo_hotel;
+    }
+    if(isset($_GET["vote"]) && $_GET["vote"] != "Seleziona voto"){
+        $temporaneo_hotel = [];
+        $vote = $_GET["vote"];
+        foreach ($hotels as $hotel){
+            if($hotel["vote"] == $vote){
+                $temporaneo_hotel [] = $hotel;
+            }
+        }
+        $filter_hotel = $temporaneo_hotel;
+        var_dump($filter_hotel);
     }
 ?>
 
@@ -39,9 +51,19 @@
                                         <option value="0">Senza parcheggio</option>
                                     </select>
                                 </div>
-                                <d class="col-4">
+                                <div class="col-4">
+                                    <select class="form-select" name="vote" id="vote">
+                                        <option selected>Seleziona voto</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
                                 <button type="submit" class="btn btn-primary">Invia</button>
-                                </d>
+                                </div>
                             </div>
                         </form>
                     </div>
