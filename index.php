@@ -6,8 +6,7 @@
         $filter_hotel = [];
         $parking = $_GET["parking"];
         foreach ($hotels as $hotel){
-            var_dump($parking);
-            var_dump($hotel["parking"]);
+           
             if ($hotel["parking"] == $parking){
                 $filter_hotel [] = $hotel;
                 // var_dump($filter_hotel);
