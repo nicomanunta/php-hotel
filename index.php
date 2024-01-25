@@ -13,10 +13,35 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <?php
-        foreach($hotels as $hotel){
-            echo $hotel["name"]." ".$hotel["description"]." ".$hotel["vote"]." ".$hotel["distance_to_center"]."<br>";   
-        }
-    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>   
+                        <th scope="col">Nome</th>
+                        <th scope="col">Descrizione</th>
+                        <th scope="col">Voto</th>
+                        <th scope="col">Distanza dal centro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($hotels as $hotel){ ?>  
+                        <tr>
+                            <td><?php echo $hotel["name"] ?></td>
+                            <td><?php echo $hotel["description"] ?></td>
+                            <td><?php echo $hotel["vote"]." &#9734;" ?></td>
+                            <td><?php echo $hotel["distance_to_center"]."km" ?></td>
+                        </tr>
+                     <?php }  ?>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </body>
 </html>
