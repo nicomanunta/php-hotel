@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <?php include __DIR__."/partials/templates/header.php" ?>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -39,6 +40,7 @@
             </div>
         </div>
     </div>
+    <?php include __DIR__."/partials/templates/footer.php" ?>
 
 
 
