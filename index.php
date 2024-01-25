@@ -2,14 +2,14 @@
     include __DIR__."/partials/array_hotel.php";
 
     $filter_hotel = $hotels;
-    if(isset($_GET["parking"])){
+    if(isset($_GET["parking"]) && $_GET["parking"] != "Seleziona filtro parcheggio"){
         $filter_hotel = [];
         $parking = $_GET["parking"];
         foreach ($hotels as $hotel){
-           
             if ($hotel["parking"] == $parking){
                 $filter_hotel [] = $hotel;
-                // var_dump($filter_hotel);
+                
+                
             }
         }
     }
